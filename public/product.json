@@ -1,44 +1,57 @@
 [
     {
         "_id": 1,
-        "name": "Balancer Idler Holder",
-        "description": "",
-        "available quantity": 600,
-        "minimum order": 100
-    }
+        "name": "Indicator",
+        "description": "RH Clear Indicator Corner Light suit Mitsubishi NL Pajero GLS 1997-2000",
+        "available":200,
+        "order":20,
+        "price":120,
+        "img":"https://i.ibb.co/42CWKTN/indicator.jpg"
+    },
     {
         "_id": 2,
-        "name": "Clutch Housing",
-        "description": "",
-        "available quantity": 550,
-        "minimum order": 50
-    }
+        "name": "Light",
+        "description": "Mitsubishi Triton LH Indicator Corner Light ME MF MH MJ 1986-1996",
+        "available":550,
+        "order":50,
+        "price":120,
+        "img":"https://i.ibb.co/KWsZ048/light.jpg"
+    },
     {
         "_id": 3,
-        "name": "Fork",
-        "description": "",
-        "available quantity": 600,
-        "minimum order": 50
-    }
+        "name": "Bumper",
+        "description": "Front Bumper Bar Cover suit Mitsubishi NP Pajero 2002-2006 Models",
+        "available":150,
+        "order":25,
+        "price":200,
+        "img":"https://i.ibb.co/Q9mKkjg/bumper.jpg"
+        
+    },
     {
         "_id": 4 ,
-        "name": "Front Bracket",
-        "description": "",
-        "available quantity":450,
-        "minimum order": 50
-    }
+        "name": "Window Switch",
+        "description": "Single Power Window Switch (Illuminated Type) suit Ford SX SY Territory or FG Falcon",
+        "available":500,
+        "order":50,
+        "price":120,
+        "img":"https://i.ibb.co/TBN0ybC/window-switch.jpg"
+    },
     {
         "_id": 5,
-        "name": "Gear 2nd Driven",
-        "description": "",
-        "available quantity": 350,
-        "minimum order": 25
-    }
+        "name": "Filter ",
+        "description": "Oil Filter Housing suit Nissan GU Patrol 3ltr ZD30 Turbo Diesel 2000-2006",
+        "available":350,
+        "order":25,
+        "price":60,
+        "img":"https://i.ibb.co/VCzbH2G/Filter.jpg"
+    },
     {
         "_id": 6,
-        "name": "Adaptor",
-        "description": "",
-        "available quantity": 450,
-        "minimum order": 50 
+        "name": "Brake disc",
+        "description": "China Factory Cheap Auto Parts Brake Disk Rotor Brake Parts Car Disc Brakes for Opeal Toyota",
+        "available":450,
+        "order":50,
+        "price":70 ,
+        "img":"https://i.ibb.co/MPVxG6S/disc-brake.jpg"
     }
 ]
