@@ -1,0 +1,44 @@
+[
+    {
+        "_id": 1,
+        "name": "Balancer Idler Holder",
+        "description": "",
+        "available quantity": 600,
+        "minimum order": 100
+    }
+    {
+        "_id": 2,
+        "name": "Clutch Housing",
+        "description": "",
+        "available quantity": 550,
+        "minimum order": 50
+    }
+    {
+        "_id": 3,
+        "name": "Fork",
+        "description": "",
+        "available quantity": 600,
+        "minimum order": 50
+    }
+    {
+        "_id": 4 ,
+        "name": "Front Bracket",
+        "description": "",
+        "available quantity":450,
+        "minimum order": 50
+    }
+    {
+        "_id": 5,
+        "name": "Gear 2nd Driven",
+        "description": "",
+        "available quantity": 350,
+        "minimum order": 25
+    }
+    {
+        "_id": 6,
+        "name": "Adaptor",
+        "description": "",
+        "available quantity": 450,
+        "minimum order": 50 
+    }
+]
