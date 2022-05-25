@@ -1,8 +1,15 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 
-const Product = ({ product, setProduct }) => {
+const Product = ({ product }) => {
     const {_id,name,img,description, available, order, price} = product;
+    const navigate = useNavigate();
+
+    const navigateToPurchase = id =>{
+        navigate(`/product/${id}`);
+    }
+   
     return (
         <div class="card w-96 bg-base-100 shadow-xl">
             <figure class="px-10 pt-10">
@@ -15,7 +22,7 @@ const Product = ({ product, setProduct }) => {
                 <p className='text-lg'><small>Minimum Order:{order}</small></p>
                 <p className='text-lg'><small>Price:${price}</small></p>
                 <div class="card-actions">
-                    <button class="btn btn-primary">Purchase</button>
+                    <button  onClick={() => navigateToPurchase(_id)} class="btn btn-primary">Purchase</button>
                 </div>
             </div>
         </div>

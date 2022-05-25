@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Product from './Product';
 
 const OurProducts = () => {
@@ -6,7 +7,7 @@ const OurProducts = () => {
    
   
     useEffect( ()=>{
-        fetch('product.json')
+        fetch('http://localhost:5000/product')
         .then(res => res.json())
         .then(data => setProduct(data));
     }, [])
@@ -25,7 +26,10 @@ const OurProducts = () => {
                    setProduct ={setProduct}
                    ></Product>)
                }
+                 
            </div>
+         
+
         </div>
     );
 };

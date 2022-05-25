@@ -3,7 +3,8 @@ import Footer from '../Shared/Footer';
 import AboutAutomart from './AboutAutomart';
 import Banner from './Banner';
 import BusinessSummary from './BusinessSummary.js';
-import ConntactUs from './ConntactUs';
+import ConntactUs from './ContactUs';
+
 import OurProducts from './OurProducts';
 
 const Home = () => {
