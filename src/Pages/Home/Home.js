@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from '../Shared/Footer';
 import AboutAutomart from './AboutAutomart';
 import Banner from './Banner';
-import BusinessSummary from './BusinessSummary';
+import BusinessSummary from './BusinessSummary.js';
 import ConntactUs from './ConntactUs';
 import OurProducts from './OurProducts';
 
