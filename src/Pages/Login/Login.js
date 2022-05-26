@@ -4,7 +4,9 @@ import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-fireba
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import useToken from '../../hooks/useTooken';
 import Loading from '../Shared/Loading';
+
 
 
 const Login = () => {
@@ -17,19 +19,19 @@ const Login = () => {
         error,
         ] = useSignInWithEmailAndPassword(auth);
 
-        // const [token]= useToken(user || gUser)
+        const [token]= useToken(user || gUser)
          
         let signInError;
 
-        // const navigate = useNavigate();
-        // const location = useLocation();
-        // let from = location.state?.from?.pathname || "/";
+        const navigate = useNavigate();
+        const location = useLocation();
+        let from = location.state?.from?.pathname || "/";
 
-        // useEffect(() =>{
-        //     if (token) {
-        //         navigate(from, { replace: true });
-        //     }
-        // },[token,from, navigate])
+        useEffect(() =>{
+            if (token) {
+                navigate(from, { replace: true });
+            }
+        },[token,from, navigate])
 
       if(loading || gLoading){
           return <Loading></Loading>
@@ -108,7 +110,7 @@ const Login = () => {
                         <input className='btn w-full max-w-xs text-white' type="submit" value="Login"/>
                     </form>
 
-                    <p><small>New to Auto Mart <Link className='text-secondary' to= "/signup">Create New Account</Link></small></p>
+                    <p><small>New to Auto Mart <Link className='text-primary' to= "/signup">Create New Account</Link></small></p>
                       
 
                     <div className="divider">OR</div>

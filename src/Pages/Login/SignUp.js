@@ -3,6 +3,7 @@ import { useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword, useSi
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import useToken from '../../hooks/useTooken';
 import Loading from '../Shared/Loading';
 
 const SignUp = () => {
@@ -17,7 +18,7 @@ const SignUp = () => {
 
       const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
-    //   const [token] = useToken(user || gUser);
+      const [token] = useToken(user || gUser);
 
       const navigate = useNavigate();
          
@@ -32,10 +33,10 @@ const SignUp = () => {
       }
 
 
-    // if (token) {
-    //     console.log(user || gUser);
-    //     navigate('/appointment');
-    //  }
+    if (token) {
+        console.log(user || gUser);
+        navigate('/purchase');
+     }
 
     const onSubmit =async data => {
         console.log(data)
@@ -43,7 +44,7 @@ const SignUp = () => {
         (data.email, data.password);
         await updateProfile({ displayName:data.name });
         console.log('update done')
-            
+    }       
     return (
         <div className='flex h-screen justify-center items-center'>
             <div className="card w-96 bg-base-100 shadow-xl">
@@ -145,5 +146,5 @@ const SignUp = () => {
         </div>
     );
 };
-}
+
 export default SignUp;

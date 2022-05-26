@@ -10,7 +10,7 @@ const Purchase = () => {
 
     const [newQuantity, setNewQuantity] = useState('')
 
-    console.log(parseInt(newQuantity))
+    // console.log(parseInt(newQuantity))
 
     const newparsedQuantity = parseInt(newQuantity)
 
@@ -39,7 +39,7 @@ const Purchase = () => {
     const handleQuantityChange = (event) => {
 
         const quantity = event.target.value;
-        console.log(quantity)
+        // console.log(quantity)
 
 
 
@@ -99,8 +99,8 @@ const Purchase = () => {
 
     return (
         <div className='w-2/3 mx-auto'>
-            <div class="hero min-h-screen bg-base-200">
-                <div class="hero-content text-left flex-col lg:flex-row border border-gray-500">
+            <div class="hero min-h-screen bg-base-100">
+                <div class="hero-content text-left flex-col lg:flex-row bg-indigo-200">
                     <img src={product.img} class="max-w-sm rounded-lg shadow-2xl" alt='' />
                     <div>
 
@@ -118,7 +118,7 @@ const Purchase = () => {
                             <p class="py-1">Price per Unit : {pricePerUnit} </p><br />
                             <input type="text" name="address" placeholder='Type address' id="" required /><br /><br />
                             <input type="number" name="phone" placeholder='Type phone' id="" required /><br /><br />
-                            <input disabled={newparsedQuantity < minParsedQuantity || newparsedQuantity > availableParsedQuantity} class="btn btn-sm" type="submit" value=" place" />
+                            <input disabled={newparsedQuantity < minParsedQuantity || newparsedQuantity > availableParsedQuantity} class="btn btn-primary uppercase text-white font-bold bg-gradient-to-br from-primary to-secondary text-white" type="submit" value=" Order " />
                         </form>
 
                     </div>
