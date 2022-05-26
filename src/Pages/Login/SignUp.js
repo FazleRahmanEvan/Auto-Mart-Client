@@ -34,8 +34,8 @@ const SignUp = () => {
 
 
     if (token) {
-        console.log(user || gUser);
-        navigate('/purchase');
+        // console.log(user || gUser);
+        navigate('/dashboard');
      }
 
     const onSubmit =async data => {
@@ -43,7 +43,7 @@ const SignUp = () => {
        await createUserWithEmailAndPassword
         (data.email, data.password);
         await updateProfile({ displayName:data.name });
-        console.log('update done')
+        // console.log('update done')
     }       
     return (
         <div className='flex h-screen justify-center items-center'>

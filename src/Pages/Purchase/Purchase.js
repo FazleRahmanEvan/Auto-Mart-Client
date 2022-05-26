@@ -4,6 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import Footer from '../Shared/Footer';
 
 
 const Purchase = () => {
@@ -98,33 +99,38 @@ const Purchase = () => {
 
 
     return (
-        <div className='w-2/3 mx-auto'>
-            <div class="hero min-h-screen bg-base-100">
-                <div class="hero-content text-left flex-col lg:flex-row bg-indigo-200">
-                    <img src={product.img} class="max-w-sm rounded-lg shadow-2xl" alt='' />
+        <div>
+            
+            <div className="hero min-h-screen bg-base-100">
+                <div className="hero-content text-left flex-col lg:flex-row bg-indigo-200">
+                    <img src={product.img} className="max-w-sm rounded-lg shadow-2xl" alt='' />
                     <div>
 
 
 
                         <form onSubmit={handleQuantity} action="">
-                            <h1 class="text-3xl font-bold ">{name}</h1>
-                            <p class="py-1">Your Name : {user.displayName} </p>
-                            <p class="py-1">Your Email : {user.email} </p>
-                            <p class="py-1">Minimum order : {minOrderQuantity}</p>
+                            <h1 className="text-3xl font-bold ">{name}</h1>
+                            <p className="py-1">Your Name : {user.displayName} </p>
+                            <p className="py-1">Your Email : {user.email} </p>
+                            <p className="py-1">Minimum order : {minOrderQuantity}</p>
                             <input type="number" name="quantity" placeholder='Type Order Quantity' id="" onChange={handleQuantityChange} required />
                             {showErrorMessage}
                             <br /><br />
-                            <p class="py-1">Available order : {availableQuantity} </p>
-                            <p class="py-1">Price per Unit : {pricePerUnit} </p><br />
+                            <p className="py-1">Available order : {availableQuantity} </p>
+                            <p className="py-1">Price per Unit : {pricePerUnit} </p><br />
                             <input type="text" name="address" placeholder='Type address' id="" required /><br /><br />
                             <input type="number" name="phone" placeholder='Type phone' id="" required /><br /><br />
-                            <input disabled={newparsedQuantity < minParsedQuantity || newparsedQuantity > availableParsedQuantity} class="btn btn-primary uppercase text-white font-bold bg-gradient-to-br from-primary to-secondary text-white" type="submit" value=" Order " />
+                            <input disabled={newparsedQuantity < minParsedQuantity || newparsedQuantity > availableParsedQuantity} className="btn btn-primary uppercase text-white font-bold bg-gradient-to-br from-primary to-secondary text-white" type="submit" value=" Order " />
                         </form>
 
                     </div>
                 </div>
             </div>
+            
+        
+        <Footer></Footer>
         </div>
+        
     );
 };
 
