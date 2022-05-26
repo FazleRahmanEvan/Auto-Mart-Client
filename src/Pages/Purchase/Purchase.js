@@ -1,11 +1,19 @@
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
+import auth from '../../firebase.init';
 import useProduct from '../../hooks/useProduct';
 import Product from '../Home/Product';
 import Footer from '../Shared/Footer';
 
 const Purchase = () => {
+    const [newQuantity, setNewQuantity] = useState('')
+
+    const newparsedQuantity = parseInt(newQuantity)
+
     const { productId } = useParams();
+
+    const [user] = useAuthState(auth)
     const [product, setProduct] = useState({});
 
     useEffect(() => {

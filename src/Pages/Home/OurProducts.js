@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Purchase from '../Purchase/Purchase';
 import Product from './Product';
+
 
 const OurProducts = () => {
     const [product, setProduct] = useState ([]);
-   
+   const [order,setOrder] = useState(null);
   
     useEffect( ()=>{
         fetch('http://localhost:5000/product')
@@ -23,13 +25,11 @@ const OurProducts = () => {
                 product.map(product=> <Product 
                    key={product._id}
                    product ={product}
-                   setProduct ={setProduct}
+            
                    ></Product>)
                }
                  
            </div>
-         
-
         </div>
     );
 };
