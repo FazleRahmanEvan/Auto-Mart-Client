@@ -14,6 +14,7 @@ import Product from './Pages/Home/Product';
 import NotFound from './Pages/Shared/NotFound';
 import MyPortfolio from './Portfolio/MyPortfolio';
 import Blog from './Blog/Blog';
+import Users from './Pages/Dashboard/Users';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
             }>
               <Route index element={<MyOrders></MyOrders>}></Route>
               <Route path="review" element={<Review></Review>}></Route>
+              <Route path="user" element={<Users></Users>}></Route>
             </Route>  
            <Route path="login" element={<Login/>} />
            <Route path="signup" element={<SignUp/>} />

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div>
+        <div className='px-12'>
             <section className=' mt-6'>
                 <h2 className='text-secondary text-xl'> #1:How will you improve the performance of a React Application?</h2>
                 <div className='text-primary font-bold'>
@@ -47,12 +47,7 @@ const Blog = () => {
                    <p>Unit tests are typically automated tests written and run by software developers to ensure that a section of an application (known as the "unit") meets its design and behaves as intended. In procedural programming, a unit could be an entire module, but it is more commonly an individual function or procedure.</p>
                 </div>
             </section>
-            <section>
-
-            </section>
-            <section>
-
-            </section>
+           
         </div>
     );
 };

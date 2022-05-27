@@ -1,29 +1,29 @@
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, Navigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const MyOrders = () => {
 
     const [orders, setOrders] = useState([]);
     const [user] = useAuthState(auth);
-
+    const navigate = useNavigate()
     
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/orders/?userEmail=${user.email}`, {
+            fetch(`http://localhost:5000/orders/?email=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
                 }
             })
                 .then(res => {
-                    console.log('res', res);
+                    // console.log('res', res);
                     if (res.status === 401 || res.status === 403) {
                         signOut(auth)
                         localStorage.removeItem('accessToken');
-                        Navigate('/');
+                        navigate('/');
                     }
                     return res.json()
                 })
@@ -35,7 +35,7 @@ const MyOrders = () => {
     }, [user])
     return (
         <div>
-            <h2>Appointment:{orders.length}</h2>
+            <h2>Orders:{orders.length}</h2>
             <div className="overflow-x-auto">
                 <table className="table w-full">
 
@@ -59,13 +59,13 @@ const MyOrders = () => {
                                 <td>{o.orderQuantity}</td>
                                
 
-                                <td>
+                                {/* <td>
                                     {( o.price && !o.paid) && <Link to={`/dashboard/payment/${o._id}`}><button className='btn btn-xs btn-success'>pay</button></Link>}
                                     {( o.price && o.paid) && <div>
                                         <p><span className='text-success'>paid</span></p>
                                         <p>Transaction Id:<span className='text-success'>{o.transactionId}</span></p>
                                         </div>}
-                                </td>
+                                </td> */}
                             </tr>)
                         }
 
