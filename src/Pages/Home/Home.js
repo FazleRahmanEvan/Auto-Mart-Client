@@ -15,8 +15,7 @@ const Home = () => {
             <AboutAutomart></AboutAutomart>
             <ConntactUs></ConntactUs>
             <BusinessSummary></BusinessSummary>
-           
-            <Footer></Footer>
+         
         </div>
     );
 };

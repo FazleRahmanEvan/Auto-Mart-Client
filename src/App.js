@@ -15,10 +15,11 @@ import NotFound from './Pages/Shared/NotFound';
 import MyPortfolio from './Portfolio/MyPortfolio';
 import Blog from './Blog/Blog';
 import Users from './Pages/Dashboard/Users';
+import Footer from './Pages/Shared/Footer';
 
 function App() {
   return (
-    <div className='px-5'>
+    <div className=''>
          <Navbar></Navbar>
          <Routes>
            <Route path="/" element ={<Home></Home>}></Route>
@@ -42,8 +43,10 @@ function App() {
            <Route path="signup" element={<SignUp/>} />
            <Route path="blog" element={<Blog></Blog>}></Route>
            <Route path='portfolio' element={<MyPortfolio></MyPortfolio>}></Route>
+           
            <Route path="*" element={<NotFound></NotFound>}></Route>
          </Routes>
+         <Footer></Footer>
     </div>
   );
 }
