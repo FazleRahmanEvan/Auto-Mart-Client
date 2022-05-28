@@ -9,7 +9,7 @@ import SignUp from './Pages/Login/SignUp';
 import RequireAuth from './Pages/Login/RequireAuth';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import MyOrders from './Pages/Dashboard/MyOrders';
-import Review from './Pages/Dashboard/Review';
+import Review from './Pages/Dashboard/ReviewAdd';
 import Product from './Pages/Home/Product';
 import NotFound from './Pages/Shared/NotFound';
 import MyPortfolio from './Portfolio/MyPortfolio';
@@ -19,6 +19,7 @@ import Footer from './Pages/Shared/Footer';
 import RequireAdmin from './Pages/Login/RequireAdmin';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import ManageProducts from './Pages/Dashboard/ManageProducts';
+import ReviewAdd from './Pages/Dashboard/ReviewAdd';
 
 function App() {
   return (
@@ -39,7 +40,7 @@ function App() {
              </RequireAuth> 
             }>
               <Route index element={<MyOrders></MyOrders>}></Route>
-              <Route path="review" element={<Review></Review>}></Route>
+              <Route path="reviewAdd" element={<ReviewAdd></ReviewAdd>}></Route>
               <Route path="user" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
               <Route path="manageProduct" element={<RequireAdmin><ManageProducts></ManageProducts></RequireAdmin>}></Route>
               <Route path="addproduct" element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
