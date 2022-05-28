@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
-import Product from '../Home/Product';
 import Loading from '../Shared/Loading';
 import DeleteConfirm from './DeleteConfirm';
 import ManageProductRow from './ManageProductRow';

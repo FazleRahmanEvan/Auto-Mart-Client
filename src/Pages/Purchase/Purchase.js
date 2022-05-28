@@ -42,7 +42,7 @@ const Purchase = () => {
             userName: user.displayName,
             email: user.email,
             orderQuantity: newQuantity,
-            price: product.Price,
+            price: product.price,
           
 
 
@@ -64,7 +64,7 @@ const Purchase = () => {
             userName: user.displayName,
             email: user.email,
             orderQuantity: newQuantity,
-            price: product.Price,
+            price: product.price,
           
         }
         setOrderInfo(orders)
@@ -82,7 +82,7 @@ const Purchase = () => {
             userName: user.displayName,
             email: user.email,
             orderQuantity: quantity,
-            price: product.Price,
+            price: product.price,
             address: address,
             phone: phone,
         }
@@ -101,7 +101,7 @@ const Purchase = () => {
 
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 if (data.insertedId) {
                     toast('success')
                 }
