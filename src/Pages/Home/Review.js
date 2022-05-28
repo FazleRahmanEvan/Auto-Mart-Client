@@ -7,7 +7,7 @@ const Review = ({ review }) => {
             <div className="card-body">
                 <div className="avatar">
                     <div className="w-32 rounded-full">
-                        <img src={img} />
+                        <img src={img} alt />
                     </div>
                 </div>
                 <h2 className="card-title">Ratings: {rating}</h2>
