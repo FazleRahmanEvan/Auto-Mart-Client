@@ -40,7 +40,7 @@ function App() {
               <Route index element={<MyOrders></MyOrders>}></Route>
               <Route path="review" element={<Review></Review>}></Route>
               <Route path="user" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
-              <Route path="addDoctor" element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
+              <Route path="addproduct" element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
             </Route>  
            <Route path="login" element={<Login/>} />
            <Route path="signup" element={<SignUp/>} />

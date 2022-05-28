@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import Purchase from '../Purchase/Purchase';
 import Product from './Product';
 
 
@@ -8,10 +6,12 @@ const OurProducts = () => {
     const [product, setProduct] = useState ([]);
    const [order,setOrder] = useState(null);
   
-    useEffect( ()=>{
+    useEffect(()=>{
+        
         fetch('http://localhost:5000/product')
         .then(res => res.json())
         .then(data => setProduct(data));
+       
     }, [])
   
     return (
@@ -25,7 +25,6 @@ const OurProducts = () => {
                 product.map(product=> <Product 
                    key={product._id}
                    product ={product}
-            
                    ></Product>)
                }
                  

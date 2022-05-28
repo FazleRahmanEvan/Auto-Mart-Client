@@ -22,7 +22,7 @@ const Users = () => {
                   
                     <thead>
                         <tr>
-                            <th></th>
+                              {/* <th>index</th> */}
                             <th>Name</th>
                             <th>Make Admin</th>
                             <th>Remove Admin</th>
