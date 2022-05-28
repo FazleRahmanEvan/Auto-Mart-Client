@@ -15,7 +15,8 @@ const Users = () => {
         return <Loading></Loading>
     }
     return (
-        <div>
+        <section className='bg-base-200'>
+            <div>
             <h2>All Users:{user.length}</h2>
             <div className="overflow-x-auto">
                 <table className="table w-full">
@@ -40,6 +41,7 @@ const Users = () => {
                 </table>
             </div>
         </div>
+        </section>
     );
 };
 

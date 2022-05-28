@@ -58,8 +58,9 @@ const AddProduct = () => {
         return <Loading></Loading>
     }
     return (
-        <div>
-        <h2 className="text-2xl">Add New Product</h2>
+       <section className='flex justify-center mt-6 bg-base-300'>
+            <div>
+        <h2 className="text-2xl mb-4 font-bold"><span className='text-primary'>Add</span> <span className='text-secondary'>New Product</span></h2>
 
         <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -167,6 +168,7 @@ const AddProduct = () => {
             <input className='btn btn-primary uppercase text-white font-bold bg-gradient-to-br from-primary to-secondary mt-5' type="submit" value="Add" />
         </form>
     </div>
+       </section>
     );
 };
 
