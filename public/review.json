@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Ronaldo" ,
+        "rating":  5,
+        "comment": "very good product" ,
+        "img": "https://i.ibb.co/4FqrTwv/cristiano-ronaldo.png"
+    },
+    {
+        "name": "Messi" ,
+        "rating": 4.5 ,
+        "comment": "good quality" ,
+        "img": "https://i.ibb.co/tptPmBy/messi.jpg"
+    },
+    {
+        "name": "Neymar" ,
+        "rating": 4.5 ,
+        "comment": "very nice" ,
+        "img": "https://i.ibb.co/qjv0Lsp/neymar.jpg"
+    }
+]

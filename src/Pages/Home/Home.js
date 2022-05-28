@@ -6,6 +6,7 @@ import BusinessSummary from './BusinessSummary.js';
 import ConntactUs from './ContactUs';
 
 import OurProducts from './OurProducts';
+import Reviews from './Reviews';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <Banner></Banner>
             <OurProducts></OurProducts>
             <AboutAutomart></AboutAutomart>
+            <Reviews></Reviews>
             <ConntactUs></ConntactUs>
             <BusinessSummary></BusinessSummary>
          
