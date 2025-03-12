@@ -1,5 +1,61 @@
 [
     {
+        "sl no.":"1",
+        "name": "Ronaldo",
+        "date": "13/10/22",
+        "ielts":4.5,
+        "interested country":"UK",
+        "phone":"0161200000"
+       
+    },
+    {
+        "sl no.":"2",
+        "name": "Messi",
+        "date": "13/10/22",
+        "ielts":4.5,
+        "interested country":"UK",
+        "phone":"0161200000"
+       
+    },
+    {
+        "sl no.":"3",
+        "name": "Neymar",
+        "date": "13/10/22",
+        "ielts":4.5,
+        "interested country":"UK",
+        "phone":"0161200000"
+       
+    },
+    {
+        "sl no.":"4",
+        "name": "Casemiro",
+        "date": "13/10/22",
+        "ielts":4.5,
+        "interested country":"UK",
+        "phone":"0161200000"
+       
+    },
+    {
+        "sl no.":"5",
+        "name": "Benzema",
+        "date": "13/10/22",
+        "ielts":4.5,
+        "interested country":"UK",
+        "phone":"0161200000"
+       
+    },
+    {
+        "sl no.":"6",
+        "name": "Antony",
+        "date": "13/10/22",
+        "ielts":4.5,
+        "interested country":"UK",
+        "phone":"0161200000"
+       
+    }
+]
+[
+    {
         "_id": 1,
         "name": "Indicator",
         "description": "RH Clear Indicator Corner Light suit Mitsubishi NL Pajero GLS 1997-2000",
@@ -55,3 +111,5 @@
         "img":"https://i.ibb.co/MPVxG6S/disc-brake.jpg"
     }
 ]
+
+
