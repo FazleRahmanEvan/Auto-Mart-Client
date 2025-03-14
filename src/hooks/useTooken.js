@@ -6,7 +6,7 @@ const useToken = (user) => {
     const email = user?.user?.email;
     const currentUser = { email: email };
     if (email) {
-      fetch(`https://auto-mart-server.vercel.app.com/user/${email}`, {
+      fetch(`https://auto-mart-server.onrender.com/user/${email}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",

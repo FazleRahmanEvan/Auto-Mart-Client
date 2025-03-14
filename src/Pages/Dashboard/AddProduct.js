@@ -13,7 +13,7 @@ const AddProduct = () => {
   } = useForm();
 
   const { data: product, isLoading } = useQuery("products", () =>
-    fetch("https://auto-mart-server.vercel.app.com/product").then((res) =>
+    fetch("https://auto-mart-server.onrender.com/product").then((res) =>
       res.json()
     )
   );
@@ -41,7 +41,7 @@ const AddProduct = () => {
             order: data.order,
             img: img,
           };
-          fetch("https://auto-mart-server.vercel.app.com/product", {
+          fetch("https://auto-mart-server.onrender.com/product", {
             method: "POST",
             headers: {
               "content-type": "application/json",

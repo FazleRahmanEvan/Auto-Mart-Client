@@ -2,30 +2,32 @@ import React from "react";
 import { toast } from "react-toastify";
 
 const DeleteConfirm = ({ deleteProduct, refetch, setDeleteProduct }) => {
-  const { name, email } = deleteProduct;
+  const { name, _id } = deleteProduct;
 
   const handleDelete = () => {
-    fetch(`https://auto-mart-server.vercel.app.com/product/${email}`, {
+    fetch(`https://auto-mart-server.onrender.com/product/${_id}`, {
       method: "DELETE",
       headers: {
+        "Content-Type": "application/json",
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
     })
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data)
+        console.log(data);
         if (data.deletedCount) {
-          toast.success(`Product: ${name} is deleted.`);
+          toast.success(`Product: ${name} has been deleted.`);
           setDeleteProduct(null);
-          refetch();
+          refetch(); // Refresh the UI
         }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        toast.error("An error occurred while deleting the product.");
       });
   };
   return (
     <div>
-      {/* <!-- The button to open modal --> */}
-
-      {/* <!-- Put this part before </body> tag-- > */}
       <input
         type="checkbox"
         id="delete-confirm-modal"

@@ -6,7 +6,7 @@ const useAdmin = (user) => {
   useEffect(() => {
     const email = user?.email;
     if (email) {
-      fetch(`https://auto-mart-server.vercel.app.com/admin/${email}`, {
+      fetch(`https://auto-mart-server.onrender.com/admin/${email}`, {
         method: "GET",
         headers: {
           "content-type": "application/json",

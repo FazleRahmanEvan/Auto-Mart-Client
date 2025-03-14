@@ -9,7 +9,7 @@ const Users = () => {
     isLoading,
     refetch,
   } = useQuery("user", () =>
-    fetch("https://auto-mart-server.vercel.app.com/user", {
+    fetch("https://auto-mart-server.onrender.com/user", {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

@@ -16,7 +16,7 @@ const Purchase = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const url = `https://auto-mart-server.vercel.app.com/product/${productId}`;
+    const url = `https://auto-mart-server.onrender.com/product/${productId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProduct(data));
@@ -75,7 +75,7 @@ const Purchase = () => {
     };
 
     // post to server
-    fetch("https://auto-mart-server.vercel.app.com/orders", {
+    fetch("https://auto-mart-server.onrender.com/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",

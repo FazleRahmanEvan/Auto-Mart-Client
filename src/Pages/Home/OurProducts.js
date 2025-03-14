@@ -6,7 +6,7 @@ const OurProducts = () => {
   const [order, setOrder] = useState(null);
 
   useEffect(() => {
-    fetch("https://auto-mart-server.vercel.app.com/product")
+    fetch("https://auto-mart-server.onrender.com/product")
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, []);

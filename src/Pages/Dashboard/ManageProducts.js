@@ -11,7 +11,7 @@ const ManageProducts = () => {
     isLoading,
     refetch,
   } = useQuery("doctors", () =>
-    fetch("https://auto-mart-server.vercel.app.com/product", {
+    fetch("https://auto-mart-server.onrender.com/product", {
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },

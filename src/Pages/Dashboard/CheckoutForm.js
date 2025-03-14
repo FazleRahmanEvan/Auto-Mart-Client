@@ -13,7 +13,7 @@ const CheckoutForm = ({ product }) => {
   const { _id, price, email, userName } = product;
 
   useEffect(() => {
-    fetch("https://auto-mart-server.vercel.app.com/create-payment-intent", {
+    fetch("https://auto-mart-server.onrender.com/create-payment-intent", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -75,7 +75,7 @@ const CheckoutForm = ({ product }) => {
         transactionId: paymentIntent.id,
       };
 
-      fetch(`https://auto-mart-server.vercel.app.com/orders/${_id}`, {
+      fetch(`https://auto-mart-server.onrender.com/orders/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",

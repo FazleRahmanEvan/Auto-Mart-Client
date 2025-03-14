@@ -12,7 +12,7 @@ const stripePromise = loadStripe(
 
 const Payment = () => {
   const { id } = useParams();
-  const url = `https://auto-mart-server.vercel.app.com/orders/${id}`;
+  const url = `https://auto-mart-server.onrender.com/orders/${id}`;
 
   const { data: product, isLoading } = useQuery(["order", id], () =>
     fetch(url, {

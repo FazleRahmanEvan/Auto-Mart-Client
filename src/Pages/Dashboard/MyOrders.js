@@ -12,7 +12,7 @@ const MyOrders = () => {
   useEffect(() => {
     if (user) {
       fetch(
-        `https://auto-mart-server.vercel.app.com/orders/?email=${user.email}`,
+        `https://auto-mart-server.onrender.com/orders/?email=${user.email}`,
         {
           method: "GET",
           headers: {

@@ -12,7 +12,7 @@ const ManageAllOrders = () => {
 
   useEffect(() => {
     if (user) {
-      fetch(`https://auto-mart-server.vercel.app.com/orders`, {
+      fetch(`https://auto-mart-server.onrender.com/orders`, {
         method: "GET",
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,

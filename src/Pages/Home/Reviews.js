@@ -1,15 +1,12 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { useQuery } from "react-query";
 import Loading from "../Shared/Loading";
 import Review from "./Review";
 
 const Reviews = () => {
-  const {
-    data: reviews,
-    isLoading,
-    refetch,
-  } = useQuery("reviews", () =>
-    fetch("https://auto-mart-server.vercel.app.com/review").then((res) =>
+  const { data: reviews, isLoading } = useQuery("reviews", () =>
+    fetch("https://auto-mart-server.onrender.com/review").then((res) =>
       res.json()
     )
   );

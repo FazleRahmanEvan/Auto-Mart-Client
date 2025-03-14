@@ -31,7 +31,7 @@ const ReviewAdd = () => {
             img: img,
           };
           // send to your database
-          fetch("https://auto-mart-server.vercel.app.com/review", {
+          fetch("https://auto-mart-server.onrender.com/review", {
             method: "POST",
             headers: {
               "content-type": "application/json",

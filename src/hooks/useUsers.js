@@ -6,7 +6,7 @@
 //     useEffect( () =>{
 //         const email = user?.email;
 //         if(email){
-//             fetch(`https://auto-mart-server.vercel.app.com/user/${email}`, {
+//             fetch(`https://auto-mart-server.onrender.com/user/${email}`, {
 //                 method:'GET',
 //                 headers: {
 //                     'content-type': 'application/json',
